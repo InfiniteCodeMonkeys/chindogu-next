@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
-import tailwindcssMotion from "tailwindcss-motion";
 
 export default {
   content: [
@@ -22,5 +21,4 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssMotion],
 } satisfies Config;
