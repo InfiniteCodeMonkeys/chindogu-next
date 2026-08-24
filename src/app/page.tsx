@@ -1,68 +1,118 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen container mx-auto font-russo">
-      <div
-        id="about"
-        className="h-1/3 w-2/3 mx-auto p-12 flex flex-col justify-center pt-24"
-      >
-        <p className="text-xl py-3">
-          Chindogu Labs is the holding company for our projects focused on
-          education and productivity.
-        </p>
-        <p className="text-xl py-3">
-          Our goal is to create tools that help people learn more effectively
-          and efficiently.
-        </p>
-        <p className="text-xl py-3">
-          What is Chindōgu? Chindōgu is the Japanese art of inventing ingenious
-          and simple gadgets that, on the face of it, seem like an ideal
-          solution to a particular problem. However, chindogu has a distinctive
-          feature: anyone actually attempting to use one of these inventions
-          would find that it causes so many new problems, or such significant
-          social embarrassment, that effectively it has no utility whatsoever.
-        </p>
-        <p className="text-xl pt-3">
-          Many of our projects are experimental and may end up looking like
-          chindōgu in the end.
-        </p>
-      </div>
-      <div id="portfolio" className="h-1/3 p-12">
-        <h2 className="text-3xl pb-6">projects</h2>
-        <div>
-          <div className="flex flex-col gap-4">
-            <Link href="https://wwww.extragrad.com" prefetch>
-              <div className="border-2 p-4">
-                <h3>extragrad</h3>
-                <p>
-                  you don&apos;t have to go back to school. discuss your
-                  favorite book with an expert.
+    <main className="max-w-max-width mx-auto px-margin-mobile lg:px-margin-desktop min-h-screen">
+      <div className="flex flex-col w-full">
+        {/* HERO */}
+        <section className="pb-32 border-b border-outline-variant flex flex-col gap-gutter relative">
+          <h1 className="pt-32 flex flex-col gap-unit font-display text-display uppercase tracking-tighter">
+            <span className="text-primary">We build things</span>
+            <span className="text-outline-variant">People actually use.</span>
+            <span className="text-secondary">Eventually.</span>
+          </h1>
+          <p className="font-code-sm text-code-sm text-on-surface-variant mt-16 max-w-[600px] border-l border-secondary pl-4">
+            A company dedicated to the pursuit of meaningful utility. We
+            embrace the friction of creation and the honesty of the attempt.
+          </p>
+        </section>
+
+        {/* PHILOSOPHY */}
+        <section className="reveal-on-scroll py-32 border-b border-outline-variant flex flex-col gap-8">
+          <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">
+            Our Philosophy
+          </h2>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-[600px]">
+            We strive to build tools that solve real problems. The creative
+            process is rarely linear, and we value the lessons learned in every
+            iteration, whether successful or not.
+          </p>
+        </section>
+
+        {/* FLAGSHIP */}
+        <section className="reveal-on-scroll py-32 border-b border-outline-variant flex flex-col gap-12">
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 bg-secondary flex-shrink-0" />
+            <h2 className="min-w-0 font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
+              Current Project: Notewell
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-full border border-outline-variant bg-surface-container-low">
+            {/* Content panel */}
+            <div className="p-8 md:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant min-h-[400px]">
+              <div className="flex flex-col gap-8">
+                <p className="font-body-md text-body-md text-primary max-w-[400px]">
+                  Notewell is our attempt to fix digital distraction. It uses
+                  spaced repetition and active recall to help you build deep,
+                  permanent knowledge from your notes.
                 </p>
               </div>
-            </Link>
-            <Link href="https://wwww.thecurricula.com" prefetch>
-              <div className="border-2 p-4">
-                <h3>theCurricula</h3>
-                <p>
-                  the internet is full of resources for learning. but it&apos;s
-                  hard to know where to start. let AI create a course for you.
-                </p>
+              <a
+                href="https://notewell.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-16 w-fit font-label-caps text-label-caps uppercase px-8 py-4 border border-primary bg-background text-primary hover:bg-primary hover:text-on-primary transition-none"
+              >
+                View Notewell
+              </a>
+            </div>
+
+            {/* Visual / terminal panel */}
+            <div className="p-8 flex flex-col relative overflow-hidden bg-surface-container-lowest min-h-[400px]">
+              <div className="relative z-10 flex flex-col h-full w-full gap-8">
+                <div className="flex items-center gap-2 border-b border-outline-variant pb-4 w-full">
+                  <div className="w-2 h-2 bg-outline-variant" />
+                  <div className="w-2 h-2 bg-outline-variant" />
+                  <div className="w-2 h-2 bg-primary" />
+                  <span className="ml-4 font-code-sm text-code-sm text-on-surface-variant truncate">
+                    notewell.io
+                  </span>
+                </div>
+
+                <a
+                  href="https://notewell.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex-1 min-h-[180px] border border-outline-variant overflow-hidden bg-surface-container-lowest"
+                >
+                  <Image
+                    src="/notewell.png"
+                    alt="The Notewell homepage: “Consume Less. Retain More.”"
+                    fill
+                    sizes="(min-width: 1024px) 480px, 100vw"
+                    className="object-cover object-top grayscale contrast-125 opacity-60 transition duration-500 group-hover:grayscale-0 group-hover:opacity-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent" />
+                </a>
+
+                <div className="font-code-sm text-code-sm text-primary flex items-baseline gap-2">
+                  <span>Building a better way to remember.</span>
+                  <span className="opacity-50 blink-cursor">_</span>
+                </div>
               </div>
-            </Link>
-            <div className="border-2 border-dashed p-4">
-              <h3>noteBuddy (coming soon)</h3>
-              <p>
-                auto generate flashcards from your notion notes and use spaced
-                repitition to study them.
-              </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div id="contact" className="h-1/3 text-center p-12">
-        For any inquiries, please reach out to{" "}
-        <a href="mailto:mike@chindogulabs.com">mike@chindogulabs.com</a>
+        </section>
+
+        {/* CONTACT */}
+        <section className="reveal-on-scroll py-32 flex flex-col gap-8">
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 bg-secondary flex-shrink-0" />
+            <h2 className="min-w-0 font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase tracking-tight">
+              Get In Touch
+            </h2>
+          </div>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-[600px]">
+            For any inquiries, please reach out.
+          </p>
+          <a
+            href="mailto:mike@chindogulabs.com"
+            className="w-fit font-code-sm text-code-sm text-primary border-b border-secondary pb-1 hover:text-secondary transition-colors break-all"
+          >
+            mike@chindogulabs.com
+          </a>
+        </section>
       </div>
     </main>
   );
