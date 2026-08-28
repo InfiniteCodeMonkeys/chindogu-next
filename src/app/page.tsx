@@ -13,10 +13,6 @@ export default function Home() {
               Eventually. <span className="text-outline-variant">Hopefully.</span>
             </span>
           </h1>
-          <p className="font-code-sm text-code-sm text-on-surface-variant mt-16 max-w-[600px] border-l border-secondary pl-4">
-            A company dedicated to the pursuit of meaningful utility. We
-            embrace the friction of creation and the honesty of the attempt.
-          </p>
         </section>
 
         {/* PHILOSOPHY */}
