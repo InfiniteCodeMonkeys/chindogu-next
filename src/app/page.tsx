@@ -9,7 +9,9 @@ export default function Home() {
           <h1 className="pt-32 flex flex-col gap-unit font-display text-display uppercase tracking-tighter">
             <span className="text-primary">We build things</span>
             <span className="text-outline-variant">People actually use.</span>
-            <span className="text-secondary">Eventually.</span>
+            <span className="text-secondary">
+              Eventually. <span className="text-outline-variant">Hopefully.</span>
+            </span>
           </h1>
           <p className="font-code-sm text-code-sm text-on-surface-variant mt-16 max-w-[600px] border-l border-secondary pl-4">
             A company dedicated to the pursuit of meaningful utility. We
