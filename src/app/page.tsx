@@ -10,7 +10,7 @@ export default function Home() {
             <span className="text-primary">We build things</span>
             <span className="text-outline-variant">People actually use.</span>
             <span className="text-secondary">
-              Eventually. <span className="text-outline-variant">Hopefully.</span>
+              Eventually. <span className="text-outline-variant">We hope.</span>
             </span>
           </h1>
         </section>
